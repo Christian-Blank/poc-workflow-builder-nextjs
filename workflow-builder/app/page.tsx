@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { DirectorySelector } from '@/components/directory-selector';
 import { FileList } from '@/components/file-list';
 import { WorkflowLoader } from '@/components/workflow-loader';
@@ -13,7 +14,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1>Workflow Builder</h1>
+        <div className={styles.titleRow}>
+          <h1>Workflow Builder</h1>
+          <Link href="/quiz" className={styles.quizLink}>Enneagram Quiz &rarr;</Link>
+        </div>
         <DirectorySelector />
         <div className={styles.toolbar}>
           <EditModeToggle />
